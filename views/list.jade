@@ -1,0 +1,84 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title ROTTEN TOMATOES -Top 100 Movies
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/bulma.css')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/aside.css')
+  body
+    nav#top.nav.is-dark.has-shadow
+      .container
+        .nav-left
+          a.nav-item(href='/')
+            img(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17274770_774798839343764_632089631_n.png?oh=aca92e28d522940e2f9f15b20a755237&oe=58C76223', alt='Description')
+    .columns
+      aside.column.is-2.aside.hero.is-fullheight.is-hidden-mobile
+        div
+          .main
+            a.item.active(href='/')
+              span.icon
+                i.fa.fa-home
+              span.name Home
+            a.item.active(href='/items')
+              span.icon
+                i.fa.fa-minus
+              span.name Items List
+      .content.column.is-10
+        .title.is-2 ALL ITEMS
+        .nav.menu
+          .container
+            if (user)
+              .nav-left
+                a.nav-item.is-tab(href="/items/add")
+                  span.icon-btn
+                    i.fa.fa-plus
+                a#delete.btn.nav-item.is-tab(href="/items")
+                  span.icon-btn
+                    i.fa.fa-trash
+        .columns.files
+            table.table
+              thread
+                tr
+                  th
+                  th Product
+                  th Price
+                  th Shop
+                  th Description
+                  th Last Updated
+
+              tbody
+                if !items.length
+                  tr
+                    td(colspan=4) You should add an item
+                else
+                  each item in items
+                    tr
+                      td <img src=#{item.image} width="150" height="100%">
+                      td #{item.product}
+                      td #{item.price}
+                      td #{item.shop}
+                      td #{item.description}
+                      td #{moment(item.updatedAt).format("YYYY-MM-DD")}
+                      if (user)
+                        td
+                          input(type="checkbox", id=item.id)                        
+                        td
+                          a#edit.btn-default(href="/items/#{item.id}") Edit
+
+
+
+    footer.footer
+      .container
+        .has-text-centered
+          p
+            strong e - Price CHECK Mo!
+            |  by 
+            a(href='#') TEAM 9
+          p
+            a.icon(href='/')
+    script(type="text/javascript", src="/javascripts/jquery-min.js")
+    script(type="text/javascript", src="/javascripts/main.js")
+    script(type="text/javascript", src="/javascripts/bulma.js")

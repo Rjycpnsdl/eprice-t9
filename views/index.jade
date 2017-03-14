@@ -1,0 +1,131 @@
+doctype html
+html(lang='en')
+  head
+    title e - Price CHECK Mo!
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    script(src='../javascripts/js/jquery.js')
+    script(src='../javascripts/js/jquery.glide.js')
+    link(rel='stylesheet', href='../stylesheets/css/index-style.css')
+    link(rel='stylesheet', href='../stylesheets/css/index-animate.css')
+    script(type='text/javascript', src='../javascripts/js/MyJQ.js')
+    script(src='../javascripts/js/jquery.localScroll.min.js', type='text/javascript')
+    script(src='../javascripts/js/jquery.scrollTo.min.js', type='text/javascript')
+    script(src='../javascripts/js/wow.min.js', type='text/javascript')
+    // scroll function
+    script(type='text/javascript').
+      $(document).ready(function() {
+      $('#navigations').localScroll({duration:800});
+      });
+    script(src='../javascripts/js/wow.min.js')
+    script.
+      new WOW().init();
+  body
+    // ============ Navigation ============
+    .headerwrapper
+      #header.container
+        .logo
+          a(href='/')
+            img(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17274770_774798839343764_632089631_n.png?oh=95dcf49e1acd68243aed035e8130f612&oe=58C6B963', alt='logo', width='165', height='74')
+        // end of Logo
+        nav
+          ul#navigations
+            if (user)
+              li
+                asd You are logged in as #{user.username}
+              li
+                a(href='auth/logout') LOGOUT
+            li
+              a(href='/items') ITEMS
+            li
+              a(href='/contact') CONTACT US
+      // end of header
+    // end of headerwrapper
+    // ============ Slider ============
+    .sliderwrapper
+      #slider.container
+        .slider
+          ul.slides
+            li.slide
+              h5.wow.fadeInDown(data-wow-delay='0.8s') e-Price CHECK Mo 
+              p.wow.fadeInUp(data-wow-delay='0.8s')
+                | An online electronic component website for price checking.
+                br
+                | Less Hassle.
+                br
+                | Less Effort.
+                br
+                | Blabalbalba
+                br
+                | Blablabalbal
+              img.wow.fadeInRight(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17270850_774966035993711_778659566_n.jpg?oh=98a8b507e94fa9c98658a66010ccf805&oe=58C75FDC', width='317', height='256', data-wow-delay='0.8s', alt='slide1img')
+            li.slide
+              h5.wow.fadeInDown(data-wow-delay='0.8s') About US.
+              p.wow.fadeInUp(data-wow-delay='0.8s')
+                | We are Team9.
+                br
+                | Arjay Dala as Back-end
+                br
+                | Peach Dapitan as Front-end
+                br
+                | Follow us @ facebook.com/team9
+              img.wow.fadeInRight(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17270340_1485476438137831_1260068006_n.png?oh=6eb029ab297e244b229201408317b291&oe=58C7B3BB', width='317', height='256', data-wow-delay='0.8s', alt='slideimg2')
+      // End of Slider
+    // end of sliderwrapper
+    // ============ Best Dishes ============
+    .bestdisheswrapper
+      #bestdishes.container
+        h2.wow.fadeInUp(data-wow-delay='0.3s') ELECTRONIC COMPONENTS
+        .slider
+          ul.slides
+            li.slide
+              .item
+                a(href='/items')
+                  img.wow.flipInX(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17274475_774966299327018_2073667525_n.jpg?oh=dcfa7d14a2dc4f28094bf293e68650b0&oe=58C791A7', width='226', height='225', alt='sliderimg', data-wow-delay='.8s')
+                h3 Capacitors
+              // end of item
+              .item2
+                a(href='/items')
+                  img.wow.flipInX(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17274822_774966312660350_1303066162_n.jpg?oh=ed6c1243e0dd9fdae6871d87eefb51c7&oe=58C78F96', width='226', height='225', alt='sliderimg', data-wow-delay='.8s')
+                h3 LED Lights
+              // end of item
+              .item3
+                a(href='/items')
+                  img.wow.flipInX(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17274201_774966305993684_519647440_n.jpg?oh=dd9b4b0a280dc1bc7ba801948772c026&oe=58C75D55', width='226', height='225', alt='sliderimg', data-wow-delay='.8s')
+                h3 Resistors
+              // end of item
+            li.slide
+              .item
+                a(href='/items')
+                  img(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17274995_774968645993450_606840261_n.jpg?oh=0b7824b19a44e04c01c78442b92cb6e5&oe=58C766EE', width='226', height='225', alt='sliderimg')
+                h3 7-Segments
+              // end of item
+              .item2
+                a(href='/items')
+                  img(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17204266_774968655993449_279922875_n.jpg?oh=f4b5546caaaf340e830f3bbf2d2bf6b7&oe=58C69604', width='226', height='225', alt='sliderimg')
+                h3 Diodes
+              // end of item
+              .item3
+                a(href='/items')
+                  img(src='https://scontent.fmnl4-3.fna.fbcdn.net/v/t34.0-12/17238285_774968652660116_420646580_n.jpg?oh=44da58041643e0b959a81c8c659e58d0&oe=58C7A22C', width='226', height='225', alt='sliderimg')
+                h3 Intergrated Circuits (IC)
+    .copyrightswrapper
+      #copyrights.container
+        p
+          | Copyright 2017
+          | e-Price Check Mo
+          |  All Rights Reserved
+      // end of copyrights
+    // end of website
+    script(type='text/javascript').
+      $('.sliderwrapper .slider').glide({
+      autoplay: 7000,
+      animationDuration: 3000,
+      arrows: true,
+      });
+    script(type='text/javascript').
+      $('.bestdisheswrapper .slider').glide({
+      autoplay: false,
+      animationDuration: 700,
+      arrows: true,
+      navigation:false,
+      });
