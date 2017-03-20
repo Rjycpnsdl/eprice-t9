@@ -56,7 +56,9 @@ html
                 else
                   each item in items
                     tr
-                      td <img src=#{item.image} width="150" height="100%">
+                      td 
+                        a(href='/profile/#{item.id}')
+                          <img src=#{item.image} width="150" height="100%">
                       td #{item.product}
                       td #{item.price}
                       td #{item.shop}

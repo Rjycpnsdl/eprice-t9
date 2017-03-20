@@ -8,6 +8,9 @@ var itemSchema = new Schema({
   price: String,
   shop: String,
   description: String,
+  description1: String,
+  description2: String,
+  description3: String,
   image: String,
   // dateCreated: [{
   //   postedDate: {

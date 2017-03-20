@@ -1,0 +1,128 @@
+doctype html
+html
+  title #{item.product}
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='https://www.w3schools.com/w3css/3/w3.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  style.
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  body.w3-light-grey
+    // Page Container
+    .w3-content.w3-margin-top(style='max-width:1400px;')
+      // The Grid
+      .w3-row-padding
+        // Left Column
+        .w3-third
+          .w3-white.w3-text-grey.w3-card-4
+            .w3-display-container
+              img(src='#{item.image}', style='width:100%')
+              .w3-display-bottomleft.w3-container.w3-text-black
+                h2 #{item.product}
+            .w3-container
+              hr
+              p.w3-large
+                b
+                  i.fa.fa-info.fa-fw.w3-margin-right.w3-text-teal
+                  | Item Description
+              p #{item.description}
+              br
+              p #{item.description1}
+              br
+              p #{item.description2}
+              br
+              p #{item.description3}
+
+
+          // End Left Column
+        // Right Column
+        .w3-twothird
+          .w3-container.w3-card-2.w3-white.w3-margin-bottom
+            h2.w3-text-grey.w3-padding-16
+              i.fa.fa-dollar.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
+              | #{item.price}
+            h2.w3-text-grey.w3-padding-16
+              i.fa.fa-map.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
+              | You can buy this at
+              br
+              | #{item.shop}
+              br
+              img(src='../images/map.jpg', style='width:100%')
+              h6.w3-text-teal
+                i.fa.fa-calendar.fa-fw.w3-margin-right
+                | Jan 2015 - 
+                span.w3-tag.w3-teal.w3-round Current
+              p
+                | Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+              hr
+            .w3-container
+              h5.w3-opacity
+                b Web Developer / something.com
+              h6.w3-text-teal
+                i.fa.fa-calendar.fa-fw.w3-margin-right
+                | Mar 2012 - Dec 2014
+              p
+                | Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+              hr
+            .w3-container
+              h5.w3-opacity
+                b Graphic Designer / designsomething.com
+              h6.w3-text-teal
+                i.fa.fa-calendar.fa-fw.w3-margin-right
+                | Jun 2010 - Mar 2012
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+              br
+          .w3-container.w3-card-2.w3-white
+            h2.w3-text-grey.w3-padding-16
+              i.fa.fa-certificate.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
+              | Education
+            .w3-container
+              h5.w3-opacity
+                b W3Schools.com
+              h6.w3-text-teal
+                i.fa.fa-calendar.fa-fw.w3-margin-right
+                | Forever
+              p Web Development! All I need to know in one place
+              hr
+            .w3-container
+              h5.w3-opacity
+                b London Business School
+              h6.w3-text-teal
+                i.fa.fa-calendar.fa-fw.w3-margin-right
+                | 2013 - 2015
+              p Master Degree
+              hr
+            .w3-container
+              h5.w3-opacity
+                b School of Coding
+              h6.w3-text-teal
+                i.fa.fa-calendar.fa-fw.w3-margin-right
+                | 2010 - 2013
+              p Bachelor Degree
+              br
+          // End Right Column
+        // End Grid
+      // End Page Container
+    footer.w3-container.w3-teal.w3-center.w3-margin-top
+      p Find me on social media.
+      i.fa.fa-facebook-official.w3-hover-text-indigo.w3-large
+      i.fa.fa-instagram.w3-hover-text-purple.w3-large
+      i.fa.fa-snapchat.w3-hover-text-yellow.w3-large
+      i.fa.fa-pinterest-p.w3-hover-text-red.w3-large
+      i.fa.fa-twitter.w3-hover-text-light-blue.w3-large
+      i.fa.fa-linkedin.w3-hover-text-indigo.w3-large
+      p
+        | Powered by 
+        a(href='https://www.w3schools.com/w3css/default.asp', target='_blank') w3.css
+
+      h1 #{item.product}
+      // form(role="form", method="post", action="/profile/#{item.id}?_method=put")
+      tbody
+        tr
+          br
+          td Where to buy: #{item.shop}
+          br 
+          td Item Price: #{item.price}
+          br 
+          td Item Description: #{item.description}

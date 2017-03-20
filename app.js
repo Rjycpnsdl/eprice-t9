@@ -16,6 +16,7 @@ var users = require('./routes/users');
 var auth = require('./routes/auth');
 var items = require('./routes/items');
 var contact = require('./routes/contact');
+var profile = require('./routes/profile');
 
 
 var MongoURI = 'mongodb://team9:admin@ds054999.mlab.com:54999/coen3463-team9'
@@ -66,6 +67,7 @@ app.use('/users', users);
 app.use('/auth/', auth);
 app.use('/items/', items);
 app.use('/contact', contact);
+app.use('/profile', profile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

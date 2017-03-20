@@ -21,9 +21,6 @@ router.post('/', function(req, res) {
       price: req.body.price,
       shop: req.body.shop,
       description: req.body.description,
-      description1: req.body.description1,
-      description2: req.body.description2,
-      description3: req.body.description3,
       image: req.body.image,
     }).save(function(err, item, count) {
       if(err) {
@@ -49,7 +46,7 @@ router.route('/:item_id')
   })
 
   .get(function(req, res) {
-    res.render('edit', {item: item, moment: moment});
+    res.render('profile', {item: item, moment: moment});
   })
 
   // .post(function(req, res) {
@@ -71,9 +68,6 @@ router.route('/:item_id')
     item.price = req.body.price;
     item.shop = req.body.shop;
     item.description = req.body.description;
-    item.description1 = req.body.description1;
-    item.description2 = req.body.description2;
-    item.description3 = req.body.description3;
     item.image = req.body.image;
 
     item.save(function(err, item, count) {
