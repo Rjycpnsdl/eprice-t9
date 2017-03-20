@@ -54,14 +54,7 @@ html
               | #{item.shop}
               br
               img(src='https://github.com/Rjycpnsdl/eprice-t9/blob/master/images/map.JPG?raw=true', style='width:50%')
-              h6.w3-text-teal
-                i.fa.fa-calendar.fa-fw.w3-margin-right
-                | Jan 2015 - 
-                span.w3-tag.w3-teal.w3-round Current
-              p
-                | Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
-              hr
-            .fb-comments(data-href='http://eprice-t9.herokuapp.com/profile/58c511cdeb10630890c8283e', data-numposts='5',data-width="100", data-colorscheme='light')
+            .fb-comments(data-href='http://eprice-t9.herokuapp.com/profile/#{item.id}', data-numposts='5',data-width="100", data-colorscheme='light')
         script.
           (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
