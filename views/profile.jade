@@ -7,18 +7,11 @@ html
   link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel='stylesheet', href='../stylesheets/css/button.css')
+  script(src='../javascripts/main.js', type='text/javascript')
   style.
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   body.w3-light-grey
     #fb-root
-    script.
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document,'script','facebook-jssdk'));
     // Page Container
     .w3-content.w3-margin-top(style='max-width:1400px;')
       // The Grid
