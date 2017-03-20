@@ -18,7 +18,7 @@ html
       js = d.createElement(s); js.id = id;
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
       fjs.parentNode.insertBefore(js, fjs);
-      };(document,'script','facebook-jssdk'));
+      }(document,'script','facebook-jssdk'));
     // Page Container
     .w3-content.w3-margin-top(style='max-width:1400px;')
       // The Grid
@@ -68,15 +68,12 @@ html
               p
                 | Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
               hr
-            .fb-comments(data-href='http://eprice-t9.herokuapp.com/profile/#{item.id}', data-numposts='5', data-colorscheme='light')
+            .fb-comments(data-href='http://eprice-t9.herokuapp.com/profile/#&#123;item.id&#125', data-numposts='5', data-colorscheme='light')
               h5.w3-opacity
                 b Web Developer / something.com
               h6.w3-text-teal
                 i.fa.fa-calendar.fa-fw.w3-margin-right
                 | Mar 2012 - Dec 2014
-              p
-                | Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
-              hr
             .w3-container
               h5.w3-opacity
                 b Graphic Designer / designsomething.com
