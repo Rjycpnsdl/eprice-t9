@@ -10,6 +10,10 @@ html
   script(src='../javascripts/main.js', type='text/javascript')
   style.
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    img {
+          position: relative;
+          left: 80px;
+        }
   body.w3-light-grey
     #fb-root
     // Page Container
@@ -20,7 +24,7 @@ html
         .w3-third
           .w3-white.w3-text-grey.w3-card-4
             .w3-display-container
-              img(src='#{item.image}', width='200', height='200')
+              img(src='#{item.image}', width='50%', height='200')
               .w3-display-bottomleft.w3-container.w3-text-black
                 h2 #{item.product}
             .w3-container
@@ -50,10 +54,14 @@ html
             h2.w3-text-grey.w3-padding-16
               i.fa.fa-map.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
               | You can buy this at
-              br
+            h2.w3-text-grey.w3-padding-16
+              i.fa.fa-asd.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
               | #{item.shop}
               br
               img(src='https://github.com/Rjycpnsdl/eprice-t9/blob/master/images/map.JPG?raw=true', style='width:50%')
+            h2.w3-text-grey.w3-padding-16
+              i.fa.fa-book.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
+              | Comments or suggestions here
             .fb-comments(data-href='http://eprice-t9.herokuapp.com/profile/#{item.id}', data-numposts='5',data-width="100", data-colorscheme='light')
         script.
           (function(d, s, id) {
