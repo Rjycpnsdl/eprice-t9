@@ -10,6 +10,10 @@ var Item = require('../models/items');
 //   next();
 // });
 
+router.post('/search', function(req, res){
+  res.redirect('/items');
+});
+
 router.get('/', function(req, res) {
   Item.find( function(err, items, count) {
     res.render('list', {items: items , user: req.user, moment: moment});

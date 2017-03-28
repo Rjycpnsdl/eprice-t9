@@ -30,14 +30,19 @@ html
         .title.is-2 ALL ITEMS
         .nav.menu
           .container
-            if (user)
-              .nav-left
-                a.nav-item.is-tab(href="/items/add")
-                  span.icon-btn
-                    i.fa.fa-plus
-                a#delete.btn.nav-item.is-tab(href="/items")
-                  span.icon-btn
-                    i.fa.fa-trash
+              if (user)
+                .nav-left
+                  a.nav-item.is-tab(href="/items/add")
+                    span.icon-btn
+                      i.fa.fa-plus
+                  a#delete.btn.nav-item.is-tab(href="/items")
+                    span.icon-btn
+                      i.fa.fa-trash
+                  form(method= 'post', action= '/items/search', onsubmit= 'itemSearch()')
+                    input#search(type='search', placeholder='Seach item here')
+                    label.label-icon(for= 'search')
+                      i.fa.fa-search.small.black-text
+              p#count
         .columns.files
             table.table
               thread
@@ -48,27 +53,27 @@ html
                   th Shop
                   th Description
                   th Last Updated
-
-              tbody
-                if !items.length
-                  tr
-                    td(colspan=4) You should add an item
-                else
-                  each item in items
+                  if (!user)
+                    each item in items
+                      tr
+                        td 
+                          a(href='/profile/#{item.id}')
+                            <img src=#{item.image} width="150" height="100%">
+                        td #{item.product}
+                        td #{item.price}
+                        td #{item.shop}
+                        td #{item.description}
+                        td #{moment(item.updatedAt).format("YYYY-MM-DD")}
+                        if (user)
+                          td
+                            input(type="checkbox", id=item.id)                        
+                          td
+                            a#edit.btn-default(href="/items/#{item.id}") Edit
+                  else
                     tr
-                      td 
-                        a(href='/profile/#{item.id}')
-                          <img src=#{item.image} width="150" height="100%">
-                      td #{item.product}
-                      td #{item.price}
-                      td #{item.shop}
-                      td #{item.description}
-                      td #{moment(item.updatedAt).format("YYYY-MM-DD")}
-                      if (user)
-                        td
-                          input(type="checkbox", id=item.id)                        
-                        td
-                          a#edit.btn-default(href="/items/#{item.id}") Edit
+                      tbody#table-body
+                    
+
 
 
 
@@ -83,4 +88,5 @@ html
             a.icon(href='/')
     script(type="text/javascript", src="/javascripts/jquery-min.js")
     script(type="text/javascript", src="/javascripts/main.js")
+    script(type="text/javascript", src="/javascripts/search.js")
     script(type="text/javascript", src="/javascripts/bulma.js")

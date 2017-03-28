@@ -13,6 +13,7 @@ html
     img {
           position: relative;
           left: 80px;
+          top: 10px;
         }
   body.w3-light-grey
     #fb-root
@@ -62,7 +63,7 @@ html
             h2.w3-text-grey.w3-padding-16
               i.fa.fa-book.fa-fw.w3-margin-right.w3-xxlarge.w3-text-teal
               | Comments or suggestions here
-            .fb-comments(data-href='http://eprice-t9.herokuapp.com/profile/#{item.id}', data-numposts='5',data-width="100", data-colorscheme='light')
+            .fb-comments(data-href='localhost:3000/profile/#{item.id}', data-numposts='5',data-width="100", data-colorscheme='light')
         script.
           (function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
