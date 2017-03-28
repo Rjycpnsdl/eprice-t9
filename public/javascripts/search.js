@@ -12,7 +12,7 @@ if (window.location.pathname === '/items') {
         items.forEach(function(item) {
           // tbody.insertAdjacentHTML('beforeend', '<tr> <td>  <input type="checkbox" id="' + contact._id + '" />  </td>  <td>  <a href="/contacts/#' + contact._id + '">' + contact.name + '</a></td> <td> ' + contact.nickname + '</td> <td>' + contact.email + ' </td> </tr>');
           // tbody.insertAdjacentHTML('beforeend', '<li class="list-group-item"><a href="/items/'+item._id+'">'+item.product+'<p>'+ item.price +' '+ item.shop+' | '+item.description+ '</p></li>');
-          tbody.insertAdjacentHTML('beforebegin', '<tr> <td> <a href="/profile/'+ item.id +'"><img src=" ' + item.image + ' " height="100%" width="150%"></a> </td>  <td> ' + item.product + ' </td> <td> ' + item.price + ' </td> <td>' + item.shop + ' </td> <td>' + item.description + ' </td> </tr>');
+          tbody.insertAdjacentHTML('beforebegin', '<tr> <td> <a href="/profile/' + item._id + '"><img src=" ' + item.image + ' " height="100%" width="150%"></a> </td>  <td> ' + item.product + ' </td> <td> ' + item.price + ' </td> <td>' + item.shop + ' </td> <td>' + item.description + ' </td> <td> <input type="checkbox", id='+item._id+'></td> <td><a href="/items/'+item._id+'"> Edit </a>  </td> </tr>');
 
         });
       })
@@ -39,7 +39,7 @@ if (window.location.pathname === '/items') {
           document.getElementById('count').insertAdjacentHTML('beforeend', '<h1>Found '+items.length+' items.</h1>');
         }
         items.forEach(function(item) {
-          document.getElementById('table-body').insertAdjacentHTML('beforebegin', '<tr> <td> <a href="/profile/'+item.id+'"><img src="'+item.image+'" height="100%" width="150%"></a> </td>  <td> ' + item.product + ' </td> <td> ' + item.price + ' </td> <td>' + item.shop + ' </td> <td>' + item.description + ' </td> </tr>');
+          document.getElementById('table-body').insertAdjacentHTML('beforebegin', '<tr> <td> <a href="/profile/'+item._id+'""><img src="'+item.image+'" height="100%" width="150%"></a> </td>  <td> ' + item.product + ' </td> <td> ' + item.price + ' </td> <td>' + item.shop + ' </td> <td>' + item.description + ' </td> <td> <input type="checkbox", id='+item._id+'></td> <td> <a href="/items/'+item._id+'"> Edit </a> </td> </tr>');
         });
         
       });
